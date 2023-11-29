@@ -1,0 +1,41 @@
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+def create_odd_array(size):
+    odd_array = []
+    num = 1
+    while size > 0:
+        odd_array.append(num)
+        num += 2
+        size -= 1
+    return odd_array
+
+def main():
+    size = int(input("Digite o tamanho do vetor (deve ser par): "))
+    if size % 2 != 0:
+        print("O tamanho do vetor deve ser par.")
+        return
+
+    odd_numbers = create_odd_array(size)
+    print("Vetor inicial:")
+    print(odd_numbers)
+
+    insertion_sort(odd_numbers)
+    print("\nVetor ordenado:")
+    print(odd_numbers)
+
+if name == "main":
+    main()
+
+
+
+
+
+
+Codigo 3 github
